@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Design.Szn/ Creative Studio — Graphic Design & Brand Identity Portfolio</title>
+    <meta name="description"
+        content="Professional portfolio of Szn Rivera, a multidisciplinary graphic designer specializing in brand identity, custom logo design, marketing flyers, and luxury print packaging.">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Main Style Sheet -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="dark-theme">
+
+    <!-- Custom Cursor follower -->
+    <div class="cursor-follower" id="cursorFollower"></div>
+
+    <!-- Ambient Glowing light blobs -->
+    <div class="ambient-glow glow-1"></div>
+    <div class="ambient-glow glow-2"></div>
+    <div class="ambient-glow glow-3"></div>
+
+    <!-- Header Navigation -->
+    <header class="header">
+        <div class="container header-container">
+            <a href="#" class="logo">
+                <span class="logo-accent">Design.Szn</span><span class="logo-dot">.</span>
+            </a>
+
+            <nav class="nav" id="navMenu">
+                <ul class="nav-list">
+                    <li><a href="#hero" class="nav-link active">Home</a></li>
+                    <li><a href="#work" class="nav-link">Work</a></li>
+                    <li><a href="#services" class="nav-link">Services</a></li>
+                    <li><a href="#process" class="nav-link">Process</a></li>
+                    <li><a href="#testimonials" class="nav-link">Reviews</a></li>
+                    <li><a href="#contact" class="nav-link">Contact</a></li>
+                </ul>
+            </nav>
+
+            <div class="header-actions">
+                <button class="theme-toggle-btn" id="themeToggle" aria-label="Toggle light/dark theme">
+                    <i class="fa-solid fa-moon moon-icon"></i>
+                    <i class="fa-solid fa-sun sun-icon"></i>
+                </button>
+                <a href="#contact" class="btn btn-sm btn-outline btn-header">Hire Me</a>
+                <button class="mobile-nav-toggle" id="mobileNavToggle" aria-label="Toggle navigation menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero-section">
+        <div class="container hero-container">
+            <div class="hero-grid">
+                <!-- Left Content Column -->
+                <div class="hero-content">
+                    <h1 class="hero-title">
+                        Crafting Premium <span class="gradient-text">Brands & Identities</span> That Command Attention.
+                    </h1>
+
+                    <p class="hero-subtitle">
+                        Hi, I'm Szn. A multidisciplinary graphic designer specializing in high-end brand identity,
+                        custom logo design, dynamic event flyers, and luxury print packaging.
+                    </p>
+
+                    <div class="hero-ctas">
+                        <a href="#work" class="btn btn-primary">View Selected Work <i
+                                class="fa-solid fa-arrow-right-long btn-icon"></i></a>
+                        <a href="#contact" class="btn btn-secondary">Let's Talk Project</a>
+                    </div>
+                </div>
+
+                <!-- Right Image Column -->
+                <div class="hero-image-area">
+                    <div class="hero-image-glow"></div>
+                    <div class="hero-image-card card">
+                        <img src="assets/0XSZN.jpg" alt="Szn - Graphic Designer Profile Portrait" class="hero-avatar">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Stats Bar -->
+            <div class="stats-bar">
+                <div class="stat-item">
+                    <span class="stat-number">5+</span>
+                    <span class="stat-label">Years of Experience</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">150+</span>
+                    <span class="stat-label">Delivered Projects</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">100%</span>
+                    <span class="stat-label">Client Satisfaction</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">4.9/5</span>
+                    <span class="stat-label">Average Review Rating</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="work" class="section work-section">
+        <div class="container">
+            <div class="section-header text-center">
+                <span class="section-subtitle">Portfolio</span>
+                <h2 class="section-title">Selected Case Studies</h2>
+                <p class="section-desc">Explore projects that demonstrate how thoughtful design translates into
+                    memorable client experiences.</p>
+            </div>
+
+            <!-- Filter Controls -->
+            <div class="portfolio-filters">
+                <button class="filter-btn active" data-filter="all">All Projects</button>
+                <button class="filter-btn" data-filter="branding">Branding</button>
+                <button class="filter-btn" data-filter="logos">Logo Design</button>
+                <button class="filter-btn" data-filter="flyers">Flyers & Promotion</button>
+                <button class="filter-btn" data-filter="print">Print & Stationery</button>
+            </div>
+
+            <!-- Portfolio Grid -->
+            <div class="portfolio-grid" id="portfolioGrid">
+                <!-- Dynamically loaded by JavaScript -->
+            </div>
+
+            <!-- Load More Button -->
+            <div class="portfolio-load-more" id="loadMoreContainer">
+                <button class="btn btn-secondary" id="loadMoreBtn">
+                    <span>Load More Designs</span>
+                    <i class="fa-solid fa-arrow-down btn-icon"></i>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="section services-section bg-alt">
+        <div class="container">
+            <div class="section-header text-center">
+                <span class="section-subtitle">Services</span>
+                <h2 class="section-title">Design Capabilities</h2>
+                <p class="section-desc">Tailored design solutions structured to communicate your brand story with
+                    sophistication and clarity.</p>
+            </div>
+
+            <div class="services-grid">
+                <!-- Service 1 -->
+                <div class="service-card card">
+                    <div class="service-icon-wrapper">
+                        <i class="fa-solid fa-compass-drafting service-icon"></i>
+                    </div>
+                    <h3 class="service-card-title">Brand Identity System</h3>
+                    <p class="service-card-text">
+                        Complete visual guidelines, color palettes, and typographic scales that build cohesive brand
+                        communication across all consumer touchpoints.
+                    </p>
+                    <ul class="service-bullets">
+                        <li><i class="fa-solid fa-circle-check"></i> Brand Strategy Guide</li>
+                        <li><i class="fa-solid fa-circle-check"></i> Typography Systems</li>
+                        <li><i class="fa-solid fa-circle-check"></i> Cohesive Asset Kits</li>
+                    </ul>
+                </div>
+
+                <!-- Service 2 -->
+                <div class="service-card card">
+                    <div class="service-icon-wrapper">
+                        <i class="fa-solid fa-signature service-icon"></i>
+                    </div>
+                    <h3 class="service-card-title">Custom Logo Design</h3>
+                    <p class="service-card-text">
+                        Distinctive, versatile vector logos that distill your company's core values into a single
+                        memorable brandmark.
+                    </p>
+                    <ul class="service-bullets">
+                        <li><i class="fa-solid fa-circle-check"></i> Monograms & Wordmarks</li>
+                        <li><i class="fa-solid fa-circle-check"></i> Logo Guidelines</li>
+                        <li><i class="fa-solid fa-circle-check"></i> Vector Masters (AI, SVG, PDF)</li>
+                    </ul>
+                </div>
+
+                <!-- Service 3 -->
+                <div class="service-card card">
+                    <div class="service-icon-wrapper">
+                        <i class="fa-solid fa-bullhorn service-icon"></i>
+                    </div>
+                    <h3 class="service-card-title">Flyers & Social Media</h3>
+                    <p class="service-card-text">
+                        Attention-grabbing digital and physical marketing assets, designed to boost visual impact and
+                        engagement for your products or events.
+                    </p>
+                    <ul class="service-bullets">
+                        <li><i class="fa-solid fa-circle-check"></i> Event Posters & Flyers</li>
+                        <li><i class="fa-solid fa-circle-check"></i> Promotional Ad Assets</li>
+                        <li><i class="fa-solid fa-circle-check"></i> Optimized Social Templates</li>
+                    </ul>
+                </div>
+
+                <!-- Service 4 -->
+                <div class="service-card card">
+                    <div class="service-icon-wrapper">
+                        <i class="fa-solid fa-print service-icon"></i>
+                    </div>
+                    <h3 class="service-card-title">Print & Stationery</h3>
+                    <p class="service-card-text">
+                        High-quality editorial layout, premium business cards, brand packaging, and print collateral
+                        crafted for tangible sensory impact.
+                    </p>
+                    <ul class="service-bullets">
+                        <li><i class="fa-solid fa-circle-check"></i> Luxury Business Cards</li>
+                        <li><i class="fa-solid fa-circle-check"></i> Brochures & Catalogues</li>
+                        <li><i class="fa-solid fa-circle-check"></i> Bespoke Packaging Mockups</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Creative Process Section -->
+    <section id="process" class="section process-section">
+        <div class="container">
+            <div class="section-header text-center">
+                <span class="section-subtitle">Workflow</span>
+                <h2 class="section-title">My Creative Blueprint</h2>
+                <p class="section-desc">A systematic, collaborative approach to delivering designs that perfectly align
+                    with your vision.</p>
+            </div>
+
+            <div class="process-timeline">
+                <!-- Step 1 -->
+                <div class="process-step card">
+                    <div class="step-header">
+                        <span class="step-num">01</span>
+                        <h3 class="step-title">Discovery & Research</h3>
+                    </div>
+                    <p class="step-text">
+                        We start with a thorough discussion about your business, audience, and objectives. Through
+                        visual moodboards and audits, we align on a clear strategic direction.
+                    </p>
+                </div>
+
+                <!-- Step 2 -->
+                <div class="process-step card">
+                    <div class="step-header">
+                        <span class="step-num">02</span>
+                        <h3 class="step-title">Concept & Sketching</h3>
+                    </div>
+                    <p class="step-text">
+                        I convert thoughts into shapes. I sketch dozens of concepts, selecting the strongest drafts to
+                        build into highly precise digital vector wireframes.
+                    </p>
+                </div>
+
+                <!-- Step 3 -->
+                <div class="process-step card">
+                    <div class="step-header">
+                        <span class="step-num">03</span>
+                        <h3 class="step-title">Refinement</h3>
+                    </div>
+                    <p class="step-text">
+                        We review the initial proofs. Together, we fine-tune colors, fonts, layouts, and spacings to
+                        polish the concept into a bulletproof design.
+                    </p>
+                </div>
+
+                <!-- Step 4 -->
+                <div class="process-step card">
+                    <div class="step-header">
+                        <span class="step-num">04</span>
+                        <h3 class="step-title">Final Hand-off</h3>
+                    </div>
+                    <p class="step-text">
+                        You receive complete source file packs ready for digital publication or high-spec print,
+                        accompanied by essential usage tips and stylesheets.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="section testimonials-section bg-alt">
+        <div class="container">
+            <div class="section-header text-center">
+                <span class="section-subtitle">Reviews</span>
+                <h2 class="section-title">What Clients Say</h2>
+                <p class="section-desc">Read honest accounts of how businesses have grown and elevated their presence
+                    through our collaboration.</p>
+            </div>
+
+            <div class="testimonials-slider-container">
+                <div class="testimonials-slider" id="testimonialsSlider">
+                    <!-- Slide 1 -->
+                    <div class="testimonial-slide active">
+                        <div class="testimonial-quote-icon"><i class="fa-solid fa-quote-left"></i></div>
+                        <p class="testimonial-text">
+                            "Working with Szn was a complete game-changer for our brand. The brand identity guide they
+                            created for Aethera is stunning. We've seen a noticeable increase in customer recognition
+                            and sales. Their attention to subtle textures and details is world-class!"
+                        </p>
+                        <div class="testimonial-author">
+                            <div class="author-details">
+                                <h4 class="author-name">Clara Mitchell</h4>
+                                <span class="author-role">Founder, Aethera Organics</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Slide 2 -->
+                    <div class="testimonial-slide">
+                        <div class="testimonial-quote-icon"><i class="fa-solid fa-quote-left"></i></div>
+                        <p class="testimonial-text">
+                            "Szn designed the branding and launch flyers for our summer music festival. The visual
+                            identity was incredibly vibrant and perfectly captured the vibe of the event. They were
+                            responsive, quick to implement feedback, and delivered everything on time."
+                        </p>
+                        <div class="testimonial-author">
+                            <div class="author-details">
+                                <h4 class="author-name">Marcus Vance</h4>
+                                <span class="author-role">Event Director, Sonic Waves</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Slide 3 -->
+                    <div class="testimonial-slide">
+                        <div class="testimonial-quote-icon"><i class="fa-solid fa-quote-left"></i></div>
+                        <p class="testimonial-text">
+                            "The logo design Vertex received from Szn is pure art. It is simple, modern, scales
+                            incredibly well across print materials and web apps, and got instant praise from our
+                            executive board. Couldn't recommend them enough!"
+                        </p>
+                        <div class="testimonial-author">
+                            <div class="author-details">
+                                <h4 class="author-name">Julian Vance</h4>
+                                <span class="author-role">Director of Marketing, Vertex Group</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Slider Controls -->
+                <div class="slider-controls">
+                    <button class="slider-arrow prev" id="sliderPrev" aria-label="Previous Testimonial"><i
+                            class="fa-solid fa-chevron-left"></i></button>
+                    <div class="slider-dots" id="sliderDots"></div>
+                    <button class="slider-arrow next" id="sliderNext" aria-label="Next Testimonial"><i
+                            class="fa-solid fa-chevron-right"></i></button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section contact-section">
+        <div class="container">
+            <div class="contact-wrapper">
+
+                <!-- Contact info -->
+                <div class="contact-info">
+                    <span class="section-subtitle">Get In Touch</span>
+                    <h2 class="section-title">Let's Create Something Memorable</h2>
+                    <p class="contact-text">
+                        Ready to elevate your branding, logo, flyer, or print collateral? Fill out this inquiry form, or
+                        email me directly. Let's make something unique together.
+                    </p>
+
+                    <div class="contact-list">
+                        <div class="contact-item">
+                            <div class="contact-item-icon"><i class="fa-regular fa-envelope"></i></div>
+                            <div>
+                                <span class="contact-item-label">Email Me</span>
+                                <a href="mailto:hello@Design.Szncreative.studio"
+                                    class="contact-item-link">Lukmanyunusa3055@gmail.com</a>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-item-icon"><i class="fa-solid fa-location-dot"></i></div>
+                            <div>
+                                <span class="contact-item-label">Location</span>
+                                <span class="contact-item-link">Abuja, Nigeria (Remote Worldwide)</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="social-directory">
+                        <h4 class="social-title">Follow My Work</h4>
+                        <div class="social-links">
+                            <a href="https://wa.me/+2347018150232" class="social-link" aria-label="Whatsapp"><i
+                                    class="fa-brands fa-whatsapp"></i></a>
+                            <a href="https://x.com/designXszn" class="social-link" aria-label="twitter"><i
+                                    class="fa-brands fa-twitter"></i></a>
+                            <a href="https://instagram.com/designxszn/" class="social-link" aria-label="Instagram"><i
+                                    class="fa-brands fa-instagram"></i></a>
+
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Contact Form -->
+                <div class="contact-form-container card">
+                    <form class="contact-form" id="contactForm">
+                        <div class="form-group">
+                            <label for="formName" class="form-label">Full Name</label>
+                            <input type="text" id="formName" class="form-input" placeholder="e.g. John Doe" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="formEmail" class="form-label">Email Address</label>
+                            <input type="email" id="formEmail" class="form-input" placeholder="e.g. john@example.com"
+                                required>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="formService" class="form-label">Service Needed</label>
+                                <select id="formService" class="form-input" required>
+                                    <option value="" disabled selected>Select a Service...</option>
+                                    <option value="Branding">Brand Identity & Strategy</option>
+                                    <option value="Logo">Custom Logo Design</option>
+                                    <option value="Flyer">Flyer & Promotion</option>
+                                    <option value="Print">Print & Packaging</option>
+                                    <option value="Multiple">Multiple Services / Other</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="formBudget" class="form-label">Project Budget</label>
+                                <select id="formBudget" class="form-input" required>
+                                    <option value="" disabled selected>Select a Budget...</option>
+                                    <option value="<100">Under $100</option>
+                                    <option value="1000-3000">$500 - $3,000</option>
+                                    <option value="3000-5000">$3,000 - $5,000</option>
+                                    <option value="5000+">$5,000+</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="formMessage" class="form-label">Project Description</label>
+                            <textarea id="formMessage" class="form-input form-textarea"
+                                placeholder="Tell me a bit about your brand, scope, and objectives..."
+                                required></textarea>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary btn-block" id="formSubmitBtn">
+                            <span>Send Project Inquiry</span>
+                            <i class="fa-solid fa-paper-plane btn-icon"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer-container">
+            <a href="#" class="logo footer-logo">
+                <span class="logo-accent">Design.Szn</span><span class="logo-dot">.</span>
+            </a>
+
+            <p class="footer-copy">&copy; 2026 Design.Szn Creative. All rights reserved. Designed for excellence.</p>
+
+            <a href="#" class="back-to-top" id="backToTopBtn" aria-label="Scroll back to top">
+                <i class="fa-solid fa-arrow-up"></i>
+            </a>
+        </div>
+    </footer>
+
+    <!-- Portfolio Case Study Modal -->
+    <div class="modal-overlay" id="projectModal">
+        <div class="modal-wrapper">
+            <button class="modal-close" id="modalCloseBtn" aria-label="Close case study details"><i
+                    class="fa-solid fa-xmark"></i></button>
+            <div class="modal-content" id="modalContent">
+                <!-- Data injected dynamically by JavaScript -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Toast Notification for Form Submit -->
+    <div class="toast-container" id="toastContainer"></div>
+
+    <!-- Script File -->
+    <script src="script.js"></script>
+</body>
+
+</html>
